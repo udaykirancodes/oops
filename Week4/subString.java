@@ -1,20 +1,14 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class subString {
-    String s;
-    public void setS(String s) {
-        this.s = s;
-    }
-    public void sub(){
-        System.out.println(s.substring(4,7));
-    }
-}
-class subString_main{
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        subString ss=new subString();
-        System.out.println("enter the string: ");
-        ss.s=sc.next();
-        ss.sub();
-    }
+class SubString
+{
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter a string");
+		String s=in.nextLine();
+		System.out.println("Enter start,end indices for substring");
+		int i=in.nextInt(),j=in.nextInt();
+		String ss=s.substring(i,j);
+		System.out.println("substring is "+ss);
+	}
 }

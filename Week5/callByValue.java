@@ -1,24 +1,19 @@
+/*Write a JAVA program for the following 
+a. Call by value b. Call by object */
 import java.util.*;
-public class callByValue {
-    int temp;
-    public void print(int a)
+class callbyvalue
+{
+    int a=10;
+    void display(int a)
     {
-        this.temp=a;
-        System.out.println("call by value: "+temp);
+        a=a+100;
+        System.out.println(a);
     }
-    public void print1(){
-        System.out.println("this is call By objects");
-    }
-    public void print(callByValue c)
+    public static void main(String[] args)
     {
-        c.temp=5;
-        c.print1();
-    }
-}
-class callByValue_main{
-    public static void main(String[] args) {
-        callByValue c=new callByValue();
-        c.print(10);
-        c.print(new callByValue());
+        callbyvalue c=new callbyvalue();
+        System.out.println(c.a);
+        c.display(20);
+        System.out.println("After calling "+c.a);
     }
 }
